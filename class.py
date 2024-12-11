@@ -48,7 +48,7 @@ def classify_images(folder_path):
                 elif datetime_tag_id[0] in exif_data and gpsinfo_tag_id[0] not in exif_data:
                     move_image(file_path, os.path.join(folder_path, '无GPSinfo'))
                 elif datetime_tag_id[0] not in exif_data and gpsinfo_tag_id[0] in exif_data:
-                    move_image(file_path, os.path.join(folder_path, '无date'))
+                    move_image(file_path, os.path.join(folder_path, '无GPSinfo'))
                 # If it has both, leave it in the original folder
 # 调用函数
 folder_path = './源文件'  # 这里替换为目标文件夹路径
